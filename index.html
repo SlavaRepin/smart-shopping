@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="img/icon-96.svg" sizes="96x96" type="image/svg">
 	<link rel="icon" href="img/icon-48.svg" sizes="48x48" type="image/svg">
-	<link rel="stylesheet" href="files/swiper-bundle.min.css?_v=20221227180150">
-	<link rel="stylesheet" href="css/style.min.css?_v=20221227180150">
+	<link rel="stylesheet" href="files/swiper-bundle.min.css?_v=20221227195241">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221227195241">
 	<title>Smart Shopping</title>
 </head>
 
@@ -41,8 +41,8 @@
 					<span class="visually-hidden">search</span>
 				</button>
 				<form class="header__search-form search-form" action="#" method="post">
-					<input class="search-form__input" type="text" name="search" tabindex="1" placeholder="search">
-					<button class="search-form__button _icon-search" type="submit" tabindex="2">
+					<input class="search-form__input" type="text" name="search" tabindex="" placeholder="search">
+					<button class="search-form__button _icon-search" type="submit" tabindex="">
 						<span class="visually-hidden">search</span>
 					</button>
 				</form>
@@ -158,8 +158,12 @@
 												</div>
 											</a>
 											<div class="slide-products__links">
-												<a class="slide-products__link slide-products__link--favorites _icon-favorites" href="#"></a>
-												<a class="slide-products__link slide-products__link--add  _icon-add" href="#"></a>
+												<a class="slide-products__link slide-products__link--favorites _icon-favorites" href="#">
+													<span class="visually-hidden">favorites</span>
+												</a>
+												<a class="slide-products__link slide-products__link--add  _icon-add" href="#">
+													<span class="visually-hidden">add</span>
+												</a>
 											</div>
 										</div>
 									</div>
@@ -183,11 +187,14 @@
 											</div>
 										</div>
 									</div>
-
 								</div>
 								<div class="products__bottom-buttons">
-									<button class="products__bottom-button-prev _icon-arrow-prev" type="button"></button>
-									<button class="products__bottom-button-next _icon-arrow-next" type="button"></button>
+									<button class="products__bottom-button-prev _icon-arrow-prev" type="button">
+										<span class="visually-hidden">previous</span>
+									</button>
+									<button class="products__bottom-button-next _icon-arrow-next" type="button">
+										<span class="visually-hidden">next</span>
+									</button>
 								</div>
 								<div class="products__bottom-pagination"></div>
 							</div>
@@ -365,10 +372,10 @@
 								chooses.</p>
 							<form class="box-content-newsletter__form form-newsletter" action="#" method="post">
 								<div class="form-newsletter__box">
-									<input class="form-newsletter__input" type="email" name="email" tabindex="3">
+									<input class="form-newsletter__input" type="email" name="email" tabindex="">
 									<span id="place">Your email address</span>
 								</div>
-								<button class="form-newsletter__button" type="submit" tabindex="4">Subscribe Now</button>
+								<button class="form-newsletter__button" type="submit" tabindex="">Subscribe Now</button>
 							</form>
 						</div>
 					</div>
@@ -425,10 +432,10 @@
 	</div>
 
 </footer>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20221227180150"></script>
-		<!-- <script src="files/jquery.validate.min.js?_v=20221227180150"></script>
-		<script src="files/jquery.maskedinput.js?_v=20221227180150"></script> -->
-		<script src="js/app.min.js?_v=20221227180150"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20221227195241"></script>
+		<!-- <script src="files/jquery.validate.min.js?_v=20221227195241"></script>
+		<script src="files/jquery.maskedinput.js?_v=20221227195241"></script> -->
+		<script src="js/app.min.js?_v=20221227195241"></script>
 	</div>
 
 </body>
