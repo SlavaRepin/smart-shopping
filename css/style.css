@@ -410,6 +410,9 @@ h6 {
 
 .header__logo-img {
   max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .header__search-btn {
@@ -718,6 +721,9 @@ h6 {
 
 .footer__logo-img {
   max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer__decor-line {
@@ -1047,22 +1053,6 @@ body._lock {
           transform: scale(0);
 }
 
-.fashion__decor-arrow {
-  position: relative;
-  z-index: 2;
-  width: 7.625rem;
-  height: 7.375rem;
-}
-
-.fashion__decor-2 {
-  margin-left: -15%;
-  width: 6.25rem;
-  height: 6.25rem;
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-}
-
 .fashion__decor {
   position: absolute;
   -webkit-transition: all 0.5s ease 0s;
@@ -1178,13 +1168,8 @@ body._lock {
 }
 
 .decor-box {
+  display: inline-block;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   width: calc(
 			11.875rem + 65 * ((100vw - 20rem) / (1440 - 320))
 		);
@@ -1203,18 +1188,43 @@ body._lock {
           transform: translate(0, -10%);
 }
 
+.decor-box__arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 47.8431372549%;
+  height: 100%;
+}
+
+.decor-box__ellipse {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 6.25rem;
+  height: 6.25rem;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
 .decor-box span {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
   font-family: Reey, sans-serif;
   font-weight: 400;
   font-size: calc(
-			1rem + 10 * ((100vw - 20rem) / (1440 - 320))
+			0.875rem + 12 * ((100vw - 20rem) / (1440 - 320))
 		);
   line-height: 1.5384615385;
   color: #595959;
   max-width: 7.9375rem;
-  position: relative;
   z-index: 2;
-  margin-left: -22%;
 }
 
 .products {
@@ -3011,23 +3021,7 @@ body._lock {
   }
 }
 
-@media screen and (min-width: 100em) {
-  .decor-box span {
-    margin-left: -17%;
-  }
-}
-
 @media screen and (max-width: 77.49875em) {
-  .fashion__decor-arrow {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    margin-left: 5%;
-  }
-
-  .fashion__decor-2 {
-    margin-right: -22%;
-  }
-
   .decor-box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -3039,8 +3033,16 @@ body._lock {
 		);
   }
 
+  .decor-box__arrow {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    left: auto;
+    right: 0;
+  }
+
   .decor-box span {
-    margin-right: -22%;
+    right: auto;
+    left: 1.875rem;
   }
 }
 
@@ -3197,30 +3199,6 @@ body._lock {
 			);
   }
 
-  .fashion__decor-arrow {
-    width: calc(
-				4.6875rem + 47 * ((100vw - 20rem) / (1140 - 320))
-			);
-  }
-
-  .fashion__decor-arrow {
-    height: calc(
-				4.375rem + 48 * ((100vw - 20rem) / (1140 - 320))
-			);
-  }
-
-  .fashion__decor-2 {
-    width: calc(
-				3.125rem + 50 * ((100vw - 20rem) / (1140 - 320))
-			);
-  }
-
-  .fashion__decor-2 {
-    height: calc(
-				3.125rem + 50 * ((100vw - 20rem) / (1140 - 320))
-			);
-  }
-
   .fashion__image-link {
     font-size: calc(
 				1.875rem + 26 * ((100vw - 20rem) / (1140 - 320))
@@ -3230,6 +3208,18 @@ body._lock {
   .fashion__image-link {
     min-height: calc(
 				3.75rem + 61 * ((100vw - 20rem) / (1140 - 320))
+			);
+  }
+
+  .decor-box__ellipse {
+    width: calc(
+				3.125rem + 50 * ((100vw - 20rem) / (1140 - 320))
+			);
+  }
+
+  .decor-box__ellipse {
+    height: calc(
+				3.125rem + 50 * ((100vw - 20rem) / (1140 - 320))
 			);
   }
 
@@ -3800,10 +3790,6 @@ body._lock {
     margin: 0 auto;
   }
 
-  .fashion__decor-arrow {
-    margin-left: 2%;
-  }
-
   .fashion__decor--3 {
     right: -20%;
     top: 75.6385068762%;
@@ -4025,16 +4011,18 @@ body._lock {
 }
 
 @media screen and (max-width: 27.5em) {
-  .fashion__decor-2 {
-    -webkit-transform: translate(0, -20%);
-        -ms-transform: translate(0, -20%);
-            transform: translate(0, -20%);
+  .decor-box__ellipse {
+    -webkit-transform: translate(-50%, -20%);
+        -ms-transform: translate(-50%, -20%);
+            transform: translate(-50%, -20%);
   }
 
   .decor-box span {
     -webkit-transform: translate(0, -20%);
         -ms-transform: translate(0, -20%);
             transform: translate(0, -20%);
+    max-width: 5rem;
+    left: 2.8125rem;
   }
 }
 
